@@ -41,7 +41,7 @@ public class HelloControllerTest {
 
     @Test
     public void getInfo_has_developer_info_header() throws Exception {
-         MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/info").accept(MediaType.APPLICATION_JSON))
+        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/info").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn();
         String actualContent = response.getResponse().getContentAsString();
         String expectedContent = "<h1>Developer Info</h1>";
@@ -53,7 +53,7 @@ public class HelloControllerTest {
     @Test
     public void get_team_returns_team_object() throws Exception {
         ObjectMapper objectMapper = new ObjectMapper(); // maps between Java objects and JSON objects
-         MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/team").accept(MediaType.APPLICATION_JSON))
+        MvcResult response = mvc.perform(MockMvcRequestBuilders.get("/team").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn();
         String actualContent = response.getResponse().getContentAsString();
         Team teamReturned = objectMapper.readValue(actualContent, Team.class);
