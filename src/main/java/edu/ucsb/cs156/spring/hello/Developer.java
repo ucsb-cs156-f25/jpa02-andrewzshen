@@ -42,7 +42,7 @@ public class Developer {
         team.addMember("Austin");
         team.addMember("Abhiram");
         team.addMember("Julia");
-        team.addMember("Helen");
+        team.addMember("Longjiao");
         team.addMember("Natalie");
         return team;
     }
